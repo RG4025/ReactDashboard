@@ -47,19 +47,36 @@ export default function TradingViewWidget() {
     []
   );
 
+
+  let isLoaded = true;
+
+      setTimeout(()=>{
+        isLoaded =  true;
+      },2000)
+
   return (
     <>
 
-    <div className='fs-6 fw-bold trading_marquee'>
-      <marquee behavior="right" direction=""><span className='text-primary'>Note :</span> This is the  BSE SENSEX INDEX! Please tap to search bar and explore other index, This Chart is Reading purpose only..</marquee>
-    </div>
+    {
 
-    <div className='tradingview-widget-container' style={{ height: "100%", width: "100%" }}>
-      <div id='tradingview_afea3' />
-      <div className="tradingview-widget-copyright">
-        {/* <a href="https://in.tradingview.com/" rel="noopener nofollow" target="_blank"><span className="blue-text">Track all markets on TradingView</span></a> */}
+      isLoaded ? <div>
+
+      <div className='fs-6 fw-bold trading_marquee'>
+        <marquee behavior="right" direction=""><span className='text-primary'>Note :</span> This is the  BSE SENSEX INDEX! Please tap to search bar and explore other index, This Chart is Reading purpose only..</marquee>
       </div>
-    </div>
+  
+      <div className='tradingview-widget-container' style={{ height: "100%", width: "100%" }}>
+        <div id='tradingview_afea3'>
+          </div>
+        <div className="tradingview-widget-copyright">
+        </div>
+      </div>
+      </div> : <div className='d-flex justify-content-center align-items-center'> <h1>Loading!!</h1> </div>
+
+
+    }
+
+    
     </>
-  );
+  )
 }

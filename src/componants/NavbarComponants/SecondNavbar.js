@@ -90,19 +90,11 @@ export default function SecNavbar() {
                     </button>
                     <ul className="dropdown-menu text-center">
                       <li>
-                        <a className="dropdown-item" href="https://rushikeshgurav.netlify.app/" target="_blank">
+                        <a className="dropdown-item" href="https://rg4025.github.io/rushikeshgurav/" target="_blank">
                           Portfolio
                         </a>
                       </li>
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="./pdf's/Resume_RushiGurav.pdf"
-                          target="_blank"
-                        >
-                          Resume
-                        </a>
-                      </li>
+                     
                       <li>
                         <a
                           className="dropdown-item"
@@ -112,6 +104,8 @@ export default function SecNavbar() {
                           Github
                         </a>
                       </li>
+
+                     
                     </ul>
                   </div>
                 </div>
@@ -258,6 +252,8 @@ export default function SecNavbar() {
                 {/* <FirstCompoBody/> */}
 
                 <Routes>
+
+
                   <Route
                     path="/"
                     element={<TradingViewWidget />}
