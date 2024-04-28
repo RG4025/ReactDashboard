@@ -8,8 +8,6 @@ const setVolume = createContext();
 
 export default function FirstCompoBody() {
   
-
-
   const stockName = useRef();
   const addCurrValue = useRef();
   const add24High = useRef();
@@ -17,8 +15,6 @@ export default function FirstCompoBody() {
   const addTotalVolume = useRef();
   
   const apiKey = 'UC99T3JWN6Y82GDT';
-
-  
 
     const [symbol, setSymbol] = useState("IBM");
   
@@ -35,7 +31,7 @@ export default function FirstCompoBody() {
 
      useEffect(() =>{
        axios.get(url).then((response) =>{
-        //  console.log(response.data);
+         console.log(response.data);
           setData(response.data);
         }).catch((error)=>{
           console.log(error);
@@ -43,9 +39,8 @@ export default function FirstCompoBody() {
       },[symbol])
    
       let volumeForChart;
-      
+      console.log(data)
       useEffect(() =>{
-
         
         setTimeout(() => {
           if(data["Global Quote"]){
@@ -84,6 +79,20 @@ export default function FirstCompoBody() {
               onChange={handle_Submit}
             >
               <option value="IBM">Select Stock</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
+              <option value="RELI">Reliance</option>
               <option value="RELI">Reliance</option>
               <option value="IBM">IBM</option>
               <option value="INFY">Infosys</option>

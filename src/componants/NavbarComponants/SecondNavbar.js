@@ -10,11 +10,6 @@ import TradingViewWidget from "../TradingViewWidget";
 import ThirdCompoNotes from "../NotesComponants/ThirdCompoNotes";
 
 export default function SecNavbar() {
-
-
-
-
-
   const [nav, setNav] = useState(
     "d-none d-xl-block col-12 col-md-12 col-xl-2 sectoin_first_wrapper"
   );
@@ -90,11 +85,15 @@ export default function SecNavbar() {
                     </button>
                     <ul className="dropdown-menu text-center">
                       <li>
-                        <a className="dropdown-item" href="https://rg4025.github.io/rushikeshgurav/" target="_blank">
+                        <a
+                          className="dropdown-item"
+                          href="https://rg4025.github.io/rushikeshgurav/"
+                          target="_blank"
+                        >
                           Portfolio
                         </a>
                       </li>
-                     
+
                       <li>
                         <a
                           className="dropdown-item"
@@ -104,8 +103,6 @@ export default function SecNavbar() {
                           Github
                         </a>
                       </li>
-
-                     
                     </ul>
                   </div>
                 </div>
@@ -145,8 +142,6 @@ export default function SecNavbar() {
                       </Link>{" "}
                     </span>
                   </div>
-
-                  
                 </div>
               </div>
             </div>
@@ -160,14 +155,12 @@ export default function SecNavbar() {
             <div className={nav}>
               <div className=" pt-4">
                 <ul className="navbar_linksMain">
-                  
-
                   <li className="home_span pt-5">
                     <p>
                       <Link to="/">
                         <span>
                           <i className="fa-solid fa-arrow-trend-up fs-6 ps-0"></i>
-                          BSE Sensex 
+                          BSE Sensex
                         </span>
                       </Link>{" "}
                     </p>
@@ -193,7 +186,7 @@ export default function SecNavbar() {
                       </Link>{" "}
                     </p>
                   </li>
-                  
+
                   <li className="home_strong">
                     <strong>
                       {" "}
@@ -211,17 +204,15 @@ export default function SecNavbar() {
                     <span>
                       <Link to="/Contact"> Contact</Link>
                     </span>
-                    
-
                   </li>
-                 
+
                   <li className="home_SocialIcon">
-                    <span>
+                    {/* <span>
                       <a href="https://www.instagram.com/rg_4025/" target="_blank">
                         {" "}
                         <i className="bi bi-instagram"></i>{" "}
                       </a>
-                    </span>
+                    </span> */}
                     <span>
                       <a href="https://twitter.com/RG4025" target="_blank">
                         {" "}
@@ -229,8 +220,10 @@ export default function SecNavbar() {
                       </a>
                     </span>
                     <span>
-                      <a href="https://www.linkedin.com/in/rushikesh-gurav-2694b0234/"
-                                            target="_blank">
+                      <a
+                        href="https://www.linkedin.com/in/rushikesh-gurav-2694b0234/"
+                        target="_blank"
+                      >
                         {" "}
                         <i className="bi bi-linkedin"></i>
                       </a>
@@ -247,32 +240,24 @@ export default function SecNavbar() {
               </div>
             </div>
             <div className="col-12 col-md-12  col-xl-10 bg-dark text-light section_first_wrapper2">
-
               <div className="container mt-5">
                 {/* <FirstCompoBody/> */}
 
                 <Routes>
+                  <Route path="/" element={<TradingViewWidget />} />
 
+                  <Route path="/FirstCompoBody" element={<FirstCompoBody />} />
 
-                  <Route
-                    path="/"
-                    element={<TradingViewWidget />}
-                  />
-                    
-                    <Route path="/FirstCompoBody" element={<FirstCompoBody />} />
-                    
-                    
                   <Route
                     path="/SecondCompoBody"
                     element={<SecondCompoBody />}
                   />
                   <Route
                     path="/ThirdCompoNotes"
-                    element={<ThirdCompoNotes/>}
+                    element={<ThirdCompoNotes />}
                   />
 
                   <Route path="/Contact" element={<Contact />} />
-
                 </Routes>
               </div>
             </div>

@@ -1,1 +1,0 @@
-export {NoteContext, NoteProvider, useNote} from './NotesContextOne'
